@@ -1,94 +1,189 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
 }
 
-body {
+body{
     background-color: darkgray;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.tarjeta {
-    height: 300px;
-    width: 300px;
-    border: solid;
-    border-radius: 20px;
-    background-color: antiquewhite;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    box-shadow: 0 4pc 8pc rgba(0, 0, 0, 0.7);
+/* TARJETA */
+
+.tarjeta{
+    width:320px;
+    padding:25px;
+
+    border-radius:20px;
+    background-color:antiquewhite;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.35);
 }
 
-.imagen-perfil {
-    margin: 0 auto;
-    border: 3px solid;
-    border-radius: 150px;
-    width: 115x;
-    height: 115px;
-    display: flex;
-    justify-content: center;
-    align-items: cover;
+/* IMAGEN */
+
+.imagen-perfil{
+    width:115px;
+    height:115px;
+
+    border-radius:50%;
+    border:3px solid black;
+
+    object-fit:cover;
+
+    margin-bottom:15px;
 }
+
+/* NOMBRE */
 
 .nombre{
-    font-size: 25px;
-    color: cornflowerblue;
-    margin-bottom: 15px;
-
+    font-size:26px;
+    color:cornflowerblue;
+    margin-bottom:5px;
 }
+
+/* PROFESION */
+
+.titulo-profesion{
+    font-size:14px;
+    color:#555;
+    margin-bottom:12px;
+}
+
+/* DESCRIPCION */
 
 .descripcion{
-    font-size: 15px;
-    color: darkgreen;
-    line-height: 1.5;
-    letter-spacing: 1.0px;
+    font-size:14px;
+    color:darkgreen;
+
+    line-height:1.5;
+    letter-spacing:0.5px;
+
+    margin-bottom:18px;
 }
+
+/* HABILIDADES */
+
+.habilidades{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    justify-content:center;
+
+    margin-bottom:20px;
+}
+
+/* SKILLS */
+
+.skill{
+    background-color:#333;
+    color:white;
+
+    padding:5px 10px;
+    border-radius:15px;
+
+    font-size:12px;
+}
+
+/* CONTENEDOR BOTONES */
+
+.acciones{
+    display:flex;
+    gap:10px;
+}
+
+/* BOTON CONTACTO */
 
 .boton-contacto{
-    margin: 10px auto;
-    height: 35px;
-    width: 100px;
-    background-color: chocolate;
-    color: aliceblue;
-    padding: 10px;
-    align-items: center;
-    border: none;
-    border-radius: 10px;
-    transition: background-color 0.5s ease;
-    display:flexbox;
+    height:35px;
+    width:110px;
+
+    background-color:chocolate;
+    color:white;
+
+    border:none;
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:all 0.3s ease;
+
+    text-decoration:none;   /* ← quitar subrayado del link */
+    display:flex;           /* ← permite centrar contenido */
+    align-items:center;     /* ← centra vertical */
+    justify-content:center; /* ← centra horizontal */
 }
+
+/* BOTON PORTAFOLIO */
+
+.boton-portafolio{
+    height:35px;
+    width:130px;
+
+    background-color:#034192;
+    color:white;
+
+    border:none;
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:all 0.3s ease;
+
+    text-decoration:none;   /* ← quitar subrayado */
+    display:flex;           /* ← centrar contenido */
+    align-items:center;
+    justify-content:center;
+}
+
+/* HOVER */
 
 .boton-contacto:hover{
-    background-color: blue;
-    cursor: pointer;
+    background-color:royalblue;
+    transform:scale(1.05);
 }
 
-@media (max-width: 480px) {
-    .tarjeta {
-        background-color: aliceblue;
+.boton-portafolio:hover{
+    background-color:black;
+    transform:scale(1.05);
+}
+
+/* MOBILE */
+
+@media (max-width:480px){
+
+    .tarjeta{
+        width:90%;
     }
-    .imagen-perfil {
-        width: 50%;
-        height: 40%;
-        }
-    
-        .nombre{
-            font-size: 2em;
-        }
-}
 
-@media (min-width: 780px) {
-    .tarjeta {
-        background-color: aquamarine;
-        width: 60%;
-        height: 60%;
+    .imagen-perfil{
+        width:90px;
+        height:90px;
     }
+
+    .nombre{
+        font-size:22px;
+    }
+
 }
 
+/* PANTALLAS GRANDES */
+
+@media (min-width:780px){
+
+    .tarjeta{
+        width:360px;
+    }
+
+}
